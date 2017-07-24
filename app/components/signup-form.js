@@ -53,6 +53,7 @@ export default Ember.Component.extend({
 
       };
       this.sendAction('signUp', params);
+      
     }
   }
 });
