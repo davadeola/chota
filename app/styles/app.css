@@ -7,3 +7,22 @@
 .right{
   float: right;
 }
+/*styling for the image on index*/
+.front{
+  margin-left: 10%;
+}
+  @media screen and (orientation: portrait) {
+    img.front { max-width: 90%; }
+  }
+
+  @media screen and (orientation: landscape) {
+    img.front { max-height: 90%; }
+  }
+/*styling for the buttons on the index*/
+.products{
+  margin-top: 500px;
+  margin-left: 40%;
+}
+.signup{
+  margin-top: 500px;
+}
