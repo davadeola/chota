@@ -1,0 +1,24 @@
+{"goods": [{
+  "name":"Nyanya",
+  "price":20,
+  "description":"fresh from the farm",
+  "quantity":"2 crates",
+  "seller":"dennis",
+  "img":"https://wallpaperscraft.com/image/tomato_cut_slices_table_tree_78288_1920x1080.jpg"
+  },{
+    "name":"Nyanya",
+    "price":20,
+    "description":"fresh from the farm",
+    "quantity":"2 crates",
+    "seller":"dennis",
+    "img":"https://wallpaperscraft.com/image/tomato_cut_slices_table_tree_78288_1920x1080.jpg"
+      },{
+    "name":"Nyanya",
+    "price":20,
+    "description":"fresh from the farm",
+    "quantity":"2 crates",
+    "seller":"dennis",
+    "img":"https://wallpaperscraft.com/image/tomato_cut_slices_table_tree_78288_1920x1080.jpg"
+
+        }]
+}
