@@ -42,7 +42,6 @@ export default Ember.Component.extend({
 
   actions:{
     signUp(){
-      debugger;
       var params={
         name: this.get('name'),
         email: this.get('email'),
@@ -54,6 +53,7 @@ export default Ember.Component.extend({
 
       };
       this.sendAction('signUp', params);
+      
     }
   }
 });
