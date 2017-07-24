@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>LOGIN</h1>
+  <form class="form signupform" action="index.html" method="post">
+    <div class="form-group">
+      <label for="">Email Address</label>
+      {{input class="form-control" placeholder="Enter your email" value=email}}
+    </div>
+
+    <div class="form-group">
+      <label for="">Password</label>
+      {{input class="form-control" placeholder="Enter your password" value=passwords}}
+    </div>
+
+    <button type="button" name="button" class="btn btn-sm btn-success">LOGIN</button>
+
+    {{#link-to 'signup'}}Are you a new user?{{/link-to}}
+  </form>
+
+
+</div>

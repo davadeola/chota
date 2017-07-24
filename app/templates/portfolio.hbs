@@ -3,18 +3,18 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"> Charles</h3>
+          <h3 class="panel-title">{{seller.name}}</h3>
         </div>
         <div class="panel-body">
           <div class="col-md-4">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJsnUCReMWYUiXXASDfMAO7HQ3WPEnrW9SgFSNzIOzgwNPcvE" alt="" class="img-responsive">
+            <img src="{{seller.image}}" alt="" class="img-responsive">
           </div>
           <div class="col-md-8">
-            <p>Charles</p><br>
-            <p>Nairobi</p> <br>
-            <p>business man and farmer</p> <br>
-            <p>070712345</p> <br>
-            <p>chchc@hotmail.com</p>
+            <p>{{seller.name}}</p><br>
+            <p>{{seller.location}}</p> <br>
+            <p>{{seller.description}}</p> <br>
+            <p>{{seller.phone}}</p> <br>
+            <p>{{seller.email}}</p>
           </div>
         </div>
         <div class="panel-footer">
@@ -23,4 +23,5 @@
       </div>
     </div>
   </div>
+
 </div>
