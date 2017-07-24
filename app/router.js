@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('goods');
+
+  this.route('portfolio', {path: "/seller/:seller_id"});
+  this.route('signup');
+
+
 });
 
 export default Router;
