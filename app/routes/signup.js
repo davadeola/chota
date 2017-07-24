@@ -10,6 +10,8 @@ export default Ember.Route.extend(formValidation,{
       var newsignUp = this.store.createRecord('seller', params);
       newsignUp.save();
       swal('Congrats! You have just signed up.');
-    }
+      this.transitionTo('login');
+    },
+
   }
 });
