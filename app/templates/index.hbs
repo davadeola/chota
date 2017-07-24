@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="col-md-12">
+    {{#parallax-content speed=0.5 height=500 }}
+      <img src="assets/images/front.png"  alt="chota" class="front">
+      {{/parallax-content}}
+  </div>
+</div>
+<button class="btn btn-info" class="products">Login</button>
+ {{#link-to 'signup'}}<button class="btn btn-warning" class="signup">Sign-up</button> {{/link-to}}
+
+{{outlet}}
