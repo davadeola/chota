@@ -11,10 +11,6 @@ export default Ember.Route.extend(formValidation,{
       newsignUp.save();
       // this.transitionTo('portfolio' ,seller.id);
       swal('Congrats! You have just signed up.');
-
-
-
-
       this.transitionTo('login');
     },
 
