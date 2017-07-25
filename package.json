@@ -32,6 +32,7 @@
     "ember-cli-sweet-alert": "0.0.2",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "~2.14.3",
+    "ember-emberfire-find-query": "^1.0.1",
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^3.0.5",
     "ember-form-validation": "^0.1.9",

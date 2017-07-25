@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    return this.store.findAll("product");
+  queryParams: {
+   search: {
+     refreshModel: true
+   }
+ },
+  model:function(params){
+    return this.store.findAll("product", params);
   },
   shoppingCart: Ember.inject.service(),
 

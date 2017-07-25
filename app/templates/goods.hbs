@@ -1,28 +1,39 @@
-
 <div class="container">
   <div class="row">
-
+    <form>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+          {{input value=search class="form-control" placeholder="Search for Product"}}
+        </div>
+    </form>
+    <br/>
+    <hr>
+    {{#each product in model}}
+      {{product.name}}
+    {{/each}}
     <div class="col-md-8">
       <div class="row">
         {{#each model as |product|}}
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h6>product.name</h6>
-            </div>
-            <div class="panel-body">
-              <img src="assets/images/orange.jpeg" class="images">
-              <div class="center">
-                <span class="label label-warning">product.price</span>
-                <span class="label label-success">product.quantity</span>
-                <span class="label label-info">product.description</span>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h6>product.name</h6>
+              </div>
+              <div class="panel-body">
+                <img src="assets/images/orange.jpeg" class="images">
+                <div class="center">
+                  <span class="label label-warning">product.price</span>
+                  <span class="label label-success">product.quantity</span>
+                  <span class="label label-info">product.description</span>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <button {{action 'addToCart' product}}>Add to Cart</button>
               </div>
             </div>
-            <div class="panel-footer">
-              <button {{action 'addToCart' product}}>Add to Cart</button>
-            </div>
           </div>
-        </div>
         {{/each}}
       </div>
     </div>
