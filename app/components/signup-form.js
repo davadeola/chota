@@ -47,13 +47,11 @@ export default Ember.Component.extend({
         email: this.get('email'),
         password: this.get('password'),
         phone: this.get('phone'),
-        location: this.get('location'),
-        description: this.get('description'),
-        image : this.get('image')
+        
 
       };
       this.sendAction('signUp', params);
-      
+
     }
   }
 });

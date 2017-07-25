@@ -20,6 +20,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+
         <li><a href="#">Goods</a></li>
         <li><a href="#">{{fa-icon "shopping-cart"}}</a></li>
       </ul>
@@ -27,4 +28,27 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
+
+
+<!-- beginning of login form -->
+<!-- {{#if session.isAuthenticated}}
+   <button {{action 'logout'}}>Logout</button>
+ {{else}}
+   {{input type="text" value=userEmail placeholder="Email"}}<br>
+   {{input type="password" value=userPassword placeholder="Password"}}<br>
+   <button {{action "login"}}> Login </button>
+ {{/if}} -->
+ <div class="container">
+   {{#if session.isAuthenticated}} {{log session.currentUser}}
+   <button class="btn btn-xs btn-danger"type="button" name="button" {{action 'logout'}}>LOG OUT</button>
+
+ {{/if}}
 {{outlet}}
+
+
+
+
+
+
+ </div>

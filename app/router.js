@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('goods');
   this.route('good');
 
-  this.route('portfolio', {path: "/seller/:seller_id"});
+  this.route('portfolio', {path: ":seller_id"});
   this.route('signup');
   this.route('login');
 
