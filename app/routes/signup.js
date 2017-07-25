@@ -7,6 +7,7 @@ export default Ember.Route.extend(formValidation,{
   firebaseApp: Ember.inject.service(),
   actions:{
 
+
     signUp(){
       var controller = this.get('controller');
       var firstName = controller.get('firstName');
@@ -52,4 +53,5 @@ export default Ember.Route.extend(formValidation,{
 //},
 
 }
+
 });

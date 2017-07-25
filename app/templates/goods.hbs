@@ -8,14 +8,14 @@
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h6>product.name</h6>
+              <h6>{{product.name}}</h6>
             </div>
             <div class="panel-body">
-              <img src="assets/images/orange.jpeg" class="images">
+              <img src="{{product.img}}" class="images">
               <div class="center">
-                <span class="label label-warning">product.price</span>
-                <span class="label label-success">product.quantity</span>
-                <span class="label label-info">product.description</span>
+                <span class="label label-warning">{{product.price}}</span>
+                <span class="label label-success">{{product.quantity}}</span>
+                 <p>{{product.description}}</p>
               </div>
             </div>
             <div class="panel-footer">
@@ -28,11 +28,11 @@
     </div>
     <div class="col-md-4">
       <div class="row">
-        {{display-cart product=product}}
+        {{display-cart product=product }}
       </div>
     </div>
   </div>
 </div>
-
+{{new-product saveProduct="saveProduct"}}
 
 {{outlet}}
