@@ -9,7 +9,7 @@ export default Ember.Component.extend({
         description: this.get('description'),
         quantity: this.get('quantity')
       };
-      this.sendAction("saveProduct", params);
+      this.sendAction('saveProduct', params);
     }
   }
 });

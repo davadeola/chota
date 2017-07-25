@@ -4,6 +4,7 @@ export default DS.Model.extend({
   name: DS.attr(),
   price:DS.attr('number'),
   description: DS.attr(),
-  quantity:DS.attr('number'),
+  quantity:DS.attr(),
+  img:DS.attr(),
   seller: DS.belongsTo('seller', {async: true})
 });
