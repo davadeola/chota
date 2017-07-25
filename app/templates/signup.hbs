@@ -1,35 +1,53 @@
 <div class="container">
-<h1>SIGNUP TODAY!</h1>
-<div class="form" class="signupform">
+  <h1>SIGNUP TODAY!</h1>
+  <div class="row">
 
-  {{#link-to 'login'}}Are you already a user?{{/link-to}}
+    <div class="form" class="signupform">
+      <div class="col-md-6">
+        {{#link-to 'login'}}Are you already a user?{{/link-to}}
 
-  <div class="form-group">
-    <label for="">First name</label>
-    {{input value=firstName placeholder="Enter your name" id="fname"  class="form-control"}}
-  </div>
+        <div class="form-group">
+          <label for="">First name</label>
+          {{input value=firstName placeholder="Enter your name" id="fname" class="form-control"}}
+        </div>
 
-  <div class="form-group">
-    <label for="">Last name</label>
-    {{input value=lastName placeholder="Enter your name" id="lname"  class="form-control"}}
-  </div>
+        <div class="form-group">
+          <label for="">Last name</label>
+          {{input value=lastName placeholder="Enter your name" id="lname" class="form-control"}}
+        </div>
 
-  <div class="form-group">
-    <label for="">Email Address</label>
-    {{input value=email placeholder="Enter your email" id="email" type="email"  class="form-control"}}
-  </div>
+        <div class="form-group">
+          <label for="">Email Address</label>
+          {{input value=email placeholder="Enter your email" id="email" type="email" class="form-control"}}
+        </div>
 
-  <div class="form-group">
-    <label for="">Password</label>
-    {{input value=password placeholder="Enter your password" id="password"  class="form-control" type="password"}}
-  </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          {{input value=password placeholder="Enter your password" id="password" class="form-control"
+          type="password"}}
+        </div>
 
-  <div class="form-group">
-    <label for="">Phone Number</label>
-    {{input value=phone placeholder="Enter your phone number" id="phone"  class="form-control"}}
-  </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="">Portfolio image</label>
+            {{input value=image placeholder="Enter your image link" id="image" class="form-control"}}
+          </div>
 
-  <button type="button" name="button" class="btn btn-md btn-success" {{action 'signUp'}}>SIGN UP</button>
+          <label for="">Phone Number</label>
+          {{input value=phone placeholder="Enter your phone number" id="phone" class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="">Brief description</label>
+          {{textarea rows="7" value=description placeholder="Enter a brief description about
+          yourself" id="description" class="form-control" }}
+        </div>
+          <button type="button" name="button" class="btn btn-md btn-success" {{action 'signUp'}}>SIGN UP</button>
+      </div>
+
+    </div>
+
   </div>
 </div>
-{{new-product}}

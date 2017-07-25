@@ -13,6 +13,8 @@ export default Ember.Route.extend(formValidation,{
       var lastName = controller.get('lastName');
       var email = controller.get('email');
       var password = controller.get('password');
+      var image = controller.get('image');
+      var description =controller.get('description');
       var phone = controller.get('phone');
       var ref = this.get('firebaseApp').auth();
       var _this = this;
@@ -23,12 +25,14 @@ export default Ember.Route.extend(formValidation,{
           firstname: firstName,
           lastname: lastName,
           email: email,
-          phone:phone
+          phone:phone,
+          image: image,
+          description: description
         });
         user.save()
         .then(() =>{
           swal('Congrats! You have just signed up.');
-          this.transitionTo('index');
+          this.transitionTo('welcome' );
         });
       });
     }

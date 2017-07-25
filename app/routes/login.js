@@ -13,7 +13,7 @@ export default Ember.Route.extend({
              email: email,
              password: password
         }).then(function() {
-            this.transitionTo('index');
+            this.transitionTo('welcome');
         }.bind(this));
     },
   }
