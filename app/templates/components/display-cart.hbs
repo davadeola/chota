@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><h4>Goods added to Cart</h4></h3>
+  </div>
+  <div class="panel-body">
+    {{#each shoppingCart.items as |item|}}
+        <div class="row well">
+          <div class="col-md-4">
+            {{item.image}}
+          </div>
+          <div class="col-md-8">
+            Name:{{item.name}}
+            Price:{{item.price}}
+            Quantity:{{item.quantity}}
+            Description:{{item.description}}
+          </div>
+        </div>
+    {{/each}}
+  </div>
+  <div class="panel-footer">
+
+  </div>
+</div>

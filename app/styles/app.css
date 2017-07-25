@@ -8,6 +8,13 @@
 .right{
   float: right;
 }
+.circle{
+  border-radius: 50%;
+}
+.maps{
+  width: 100%;
+  height: 40%;
+}
 /*styling for the image on index*/
 .front{
   margin-left: 10%;
