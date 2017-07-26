@@ -9,6 +9,12 @@ export default Ember.Route.extend({
   },
   model(params){
     return this.store.find("seller" , params.seller_id);
+  },
+  actions:{
+    saveProduct(params){
+      var newProduct = this.store.createRecord('product', params);
+      newProduct.save();
+    }
   }
 
 
