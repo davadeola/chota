@@ -1,1 +1,35 @@
-{{yield}}
+{{#if updateProductForm}}
+  <h4>Update {{product.name}}'s {{product.price}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name" placeholder=product.name class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=price id="price" placeholder=product.price class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{input value=description id="description" placeholder=product.description class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for=quantity>Quantity</label>
+        {{input value=quantity id="quantity" placeholder=product.quantity class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=image id="image" placeholder=product.image class="form-control" placeholder=product.image}}
+      </div>
+
+      <button {{action 'update' product}} class="btn btn-warning">Save Changes</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateProductForm'}} class="btn btn-success">Update</button>
+{{/if}}
