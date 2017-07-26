@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  classNames: 'Example',
+  setBySearchable: null,
   // classNames: 'Example',
   // setBySearchable: null,
+
 
 
 shoppingCart:Ember.inject.service(),
@@ -15,6 +18,12 @@ shoppingCart:Ember.inject.service(),
     addToCart(item) {
       this.get('shoppingCart').add(item);
     },
+    saveProduct(params){
+      var newProduct = this.store.createRecord('product', params);
+      newProduct.save();
+
+    }
+
     // update(selection) {
     //   this.set('setBySearchable', selection);
     // },
@@ -23,6 +32,7 @@ shoppingCart:Ember.inject.service(),
     //   newProduct.save();
     //
     // }
+
   }
 
 });
