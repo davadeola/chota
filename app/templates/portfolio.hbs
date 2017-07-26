@@ -23,5 +23,8 @@
       </div>
     </div>
   </div>
-{{new-product saveProduct='saveProduct'}}
+{{new-product saveProduct='saveProduct' seller=model}}
+{{#each model.products as |product|}}
+    {{product-tile product=product}}
+  {{/each}}
 </div>
