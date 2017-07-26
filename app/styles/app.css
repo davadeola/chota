@@ -6,6 +6,7 @@
 ul{
   list-style: none;
 }
+
 ul li{
   display: inline-block;
 }
@@ -20,6 +21,7 @@ ul li{
 }
 .footer{
   text-align: center;
+  
 }
 .center{
   text-align: center;
