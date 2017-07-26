@@ -13,9 +13,6 @@ export default Ember.Route.extend({
     addToCart(item) {
       this.get('shoppingCart').add(item);
     },
-    update(selection) {
-      this.set('setBySearchable', selection);
-    },
     saveProduct(params){
       var newProduct = this.store.createRecord('product', params);
       newProduct.save();
