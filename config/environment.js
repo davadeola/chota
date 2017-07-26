@@ -18,6 +18,7 @@ module.exports = function(environment) {
       }
     },
     firebase:{
+
       apiKey: "AIzaSyCK4in28kJlY6jjknosiq0_ZUCpT1LBeZ8",
     authDomain: "chota-dc379.firebaseapp.com",
     databaseURL: "https://chota-dc379.firebaseio.com",
@@ -25,7 +26,9 @@ module.exports = function(environment) {
     storageBucket: "chota-dc379.appspot.com",
     messagingSenderId: "1059399951060"
     },
-
+    torii: {
+    sessionServiceName: 'session'
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -33,11 +36,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.myApiKey = process.env.apiKey;
   }
 
   if (environment === 'test') {

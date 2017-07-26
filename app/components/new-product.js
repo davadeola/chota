@@ -7,9 +7,10 @@ export default Ember.Component.extend({
         name: this.get('name'),
         price: this.get('price'),
         description: this.get('description'),
-        quantity: this.get('quantity')
+        quantity: this.get('quantity'),
+        img:this.get('img')
       };
-      this.sendAction("saveProduct", params);
+      this.sendAction('saveProduct', params);
     }
   }
 });

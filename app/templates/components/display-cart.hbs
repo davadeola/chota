@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><h4>Goods added to Cart</h4></h3>
+  </div>
+  <div class="panel-body">
+    {{#each shoppingCart.items as |item|}}
+        <div class="row well">
+          <div class="col-md-4">
+            <img src="{{item.img}}" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-8">
+            Name:{{item.name}} <br>
+            Price:{{item.price}} <br>
+            Quantity:{{item.quantity}} <br>
+            Description:{{item.description}}
+          </div>
+        </div>
+    {{/each}}
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>KSH {{totalCost}}</h4>
+      </div>
+      <div class="col-md-6">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="LASFDRTNZXPZC"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,17 @@
 <div class="container-fluid">
+  {{#link-to 'portfolio' session.uid}}Go to your private page.{{/link-to}} 
   <div class="col-md-12">
     {{#parallax-content speed=0.5 height=500 }}
       <img src="assets/images/front.png"  alt="chota" class="front">
       {{/parallax-content}}
   </div>
+  <p>
+
+  This is our protected content which can only be seen by logged in users.
+
+
+  </p>
+
 </div>
 <button class="btn btn-info" class="products">Login</button>
  {{#link-to 'signup'}}<button class="btn btn-warning" class="signup">Sign-up</button> {{/link-to}}
-
-{{outlet}}
