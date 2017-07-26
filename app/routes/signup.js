@@ -1,20 +1,57 @@
 import Ember from 'ember';
 import formValidation from 'ember-form-validation/mixins/form-validation';
 import swal from 'sweetalert';
+import Firebase from 'firebase';
 
 export default Ember.Route.extend(formValidation,{
-
+  firebaseApp: Ember.inject.service(),
   actions:{
-    signUp(params){
-      var newsignUp = this.store.createRecord('seller', params);
-      newsignUp.save();
-      // this.transitionTo('portfolio' ,seller.id);
-      swal('Congrats! You have just signed up.');
-      this.transitionTo('login');
-    },
-    // saveProduct(params){
-    //   var newProduct = this.store.createRecord('product', params);
-    //   newProduct.save();
-    // }
-  }
+
+
+    signUp(){
+      var controller = this.get('controller');
+      var firstName = controller.get('firstName');
+      var lastName = controller.get('lastName');
+      var email = controller.get('email');
+      var password = controller.get('password');
+      var image = controller.get('image');
+      var description =controller.get('description');
+      var phone = controller.get('phone');
+      var ref = this.get('firebaseApp').auth();
+      var _this = this;
+
+      ref.createUserWithEmailAndPassword(email, password).then((userData) => {
+        var user = this.get('store').createRecord('seller', {
+          id: userData.uid,
+          firstname: firstName,
+          lastname: lastName,
+          email: email,
+          phone:phone,
+          image: image,
+          description: description
+        });
+        user.save()
+        .then(() =>{
+          swal('Congrats! You have just signed up.');
+          this.transitionTo('welcome' );
+        });
+      });
+    }
+
+
+
+//
+// var newsignUp = this.store.createRecord('seller', params);
+// newsignUp.save();
+// // this.transitionTo('portfolio' ,seller.id);
+// swal('Congrats! You have just signed up.');
+//
+//
+//
+//
+// this.transitionTo('login');
+//},
+
+}
+
 });

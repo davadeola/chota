@@ -13,8 +13,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
+
       <ul class="nav navbar-nav navbar-right">
+
         <li><a href="#">Goods</a></li>
         <li><a href="#">{{fa-icon "shopping-cart"}}</a></li>
         <li><a href="#">{{#link-to 'contact'}}Contact Us{{/link-to}}</a></li>
@@ -22,6 +23,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <div>
 {{outlet}}
 </div>
@@ -37,3 +39,29 @@
       &copy; Chota
     </div>
 </footer>
+
+
+
+
+<!-- beginning of login form -->
+<!-- {{#if session.isAuthenticated}}
+   <button {{action 'logout'}}>Logout</button>
+ {{else}}
+   {{input type="text" value=userEmail placeholder="Email"}}<br>
+   {{input type="password" value=userPassword placeholder="Password"}}<br>
+   <button {{action "login"}}> Login </button>
+ {{/if}} -->
+ <div class="container">
+   {{#if session.isAuthenticated}} {{log session.currentUser}}
+   <button class="btn btn-xs btn-danger"type="button" name="button" {{action 'logout'}}>LOG OUT</button>
+
+ {{/if}}
+{{outlet}}
+
+
+
+
+
+
+ </div>
+>>>>>>> ae023e8ed4ecab5ee7e402ff15b049e573f162f1

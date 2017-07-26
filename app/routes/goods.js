@@ -4,6 +4,10 @@ export default Ember.Route.extend({
   classNames: 'Example',
   setBySearchable: null,
   model:function(params){
+
+
+
+  model(){
     return this.store.findAll("product");
   },
   actions: {
@@ -16,6 +20,8 @@ export default Ember.Route.extend({
     saveProduct(params){
       var newProduct = this.store.createRecord('product', params);
       newProduct.save();
+
     }
   }
+
 });
