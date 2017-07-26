@@ -1,20 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  queryParams: {
-   search: {
-     refreshModel: true
-   }
- },
+  classNames: 'Example',
+  setBySearchable: null,
   model:function(params){
-    return this.store.findAll("product", params);
+    return this.store.findAll("product");
   },
-  shoppingCart: Ember.inject.service(),
-
-
   actions: {
     addToCart(item) {
       this.get('shoppingCart').add(item);
+    },
+    update(selection) {
+      this.set('setBySearchable', selection);
     },
     saveProduct(params){
       var newProduct = this.store.createRecord('product', params);
