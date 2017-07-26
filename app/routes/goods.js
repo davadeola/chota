@@ -10,6 +10,7 @@ shoppingCart:Ember.inject.service(),
   model(){
     return this.store.findAll("product");
   },
+
   actions: {
     addToCart(item) {
       this.get('shoppingCart').add(item);
