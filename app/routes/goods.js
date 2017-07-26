@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   classNames: 'Example',
   setBySearchable: null,
-  model:function(params){
 
 
 
