@@ -1,5 +1,6 @@
+
 <div class="col-md-4">
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">
       <h6>{{product.name}}</h6>
     </div>
@@ -12,8 +13,7 @@
       </div>
     </div>
     <div class="panel-footer">
-      <button {{action 'addToCart' product}}>Add to Cart</button>
-
+      <button class="btn btn-warning" {{action 'addToCart' product}}>Add to Cart</button>
     </div>
   </div>
 </div>

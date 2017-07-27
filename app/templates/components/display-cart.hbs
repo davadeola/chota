@@ -12,7 +12,10 @@
             Name:{{item.name}} <br>
             Price:{{item.price}} <br>
             Quantity:{{item.quantity}} <br>
-            Description:{{item.description}}
+            Description:{{item.description}} <br>
+            <button type="button" class="btn btn-default" {{action "removeProduct" item}}>
+              remove product
+            </button>
           </div>
         </div>
     {{/each}}

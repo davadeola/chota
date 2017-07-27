@@ -10,35 +10,7 @@
     <hr>
     <div class="col-md-8">
       <div class="row">
-
-        {{#each model as |product|}}
-
-          <div class="col-md-4">
-
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h6>{{product.name}}</h6>
-                <h6>Contact: {{#link-to 'look-up' product.seller.id}}{{product.seller.firstname}} {{product.seller.lastname}}{{/link-to}}</h6>
-              </div>
-              <div class="panel-body">
-                <img src={{product.img}} class="images">
-                <div class="center">
-                <h6>Price: <span class="label label-warning"><b>KSH </b>{{product.price}}</span></h6>
-                <h6>Quantity:  <span class="label label-success">{{product.quantity}}</span></h6>
-                <h6> Description:  <span class="label label-info">{{product.description}}</span></h6>
-                </div>
-              </div>
-
-              <div class="panel-footer">
-                <button {{action 'addToCart' product}}>Add to Cart</button>
-              </div>
-                </div>
-
-
-          </div>
-
-        {{/each}}
-        
+        {{display-goods model=model}}
       </div>
     </div>
     <div class="col-md-4">
