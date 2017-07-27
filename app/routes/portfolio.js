@@ -30,11 +30,28 @@ export default Ember.Route.extend({
       product.save();
       this.transitionTo('portfolio');
     },
-    destroyProduct(product) {
-      product.destroyRecord();
-      this.transitionTo('portfolio');
-    }
+    delete(product) {
+    var seller = product.get('seller.products');
+    seller.forEach(function(item){
+      if (item===product) {
+        item.destroyRecord();
+        
+      }
+    });
+
+
+    },
   }
+
+  // console.log('entered end');
+  // var seller = product.get('seller.products');
+  //
+  // Ember.RSVP.all(product_deletions).then(function() {
+  //   return seller.destroyRecord();
+  //   console.log('finished end');
+  // },function () {
+  //   swal('something went wrong');
+  //
   // saveReview(params) {
   //       var newReview = this.store.createRecord('review', params);
   //       var rental = params.rental;

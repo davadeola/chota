@@ -8,11 +8,11 @@ export default Ember.Component.extend({
     },
     update(product) {
       var params = {
-        name: this.get('name'),
-        price: this.get('price'),
-        description: this.get('description'),
-        quantity: this.get('quantity'),
-        image: this.get('image')
+        name: this.get('name1'),
+        price: this.get('price1'),
+        description: this.get('description1'),
+        quantity: this.get('quantity1'),
+        image: this.get('image1')
       };
       this.set('updateProductForm', false);
       this.sendAction('update', product, params);
