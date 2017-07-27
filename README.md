@@ -1,7 +1,7 @@
 # chota
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## The future of E-Commerce in Kenya. Unlike the normal E-Commerce sites this site is tailor made for farmers and farm produce. it gives a platform to all kinds of farmers to easily access their customers and widen their market.
+
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+
 
 ## Installation
 
@@ -39,7 +39,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+
 
 ## Further Reading / Useful Links
 
