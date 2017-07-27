@@ -1,34 +1,17 @@
 <div class="container">
   <div class="row">
+
       <!-- {{searchable-select
         content=TEDevents
         sortBy="title"
         on-change=(action "update")}}
         <p>Set by Searchable: {{setBySearchable.title}}</p> -->
+
     <br/>
     <hr>
     <div class="col-md-8">
       <div class="row">
-        {{#each model as |product|}}
-          <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h6>{{product.name}}</h6>
-              </div>
-              <div class="panel-body">
-                <img src={{product.img}} class="images">
-                <div class="center">
-                  <span class="label label-warning">{{product.price}}</span>
-                  <span class="label label-success">{{product.quantity}}</span>
-                  <span class="label label-info">{{product.description}}</span>
-                </div>
-              </div>
-              <div class="panel-footer">
-                <button {{action 'addToCart' product}}>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        {{/each}}
+        {{display-goods model=model}}
       </div>
     </div>
     <div class="col-md-4">

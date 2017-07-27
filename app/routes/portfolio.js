@@ -1,24 +1,34 @@
 import Ember from 'ember';
 import swal from 'sweetalert';
 export default Ember.Route.extend({
-  beforeModel: function(){
+
+  beforeModel: function() {
     console.log(this.get('session'));
-    if(!this.get('session.isAuthenticated')){
+    if (!this.get('session.isAuthenticated')) {
       this.transitionTo('login');
     }
   },
-  model(params){
-    return this.store.find("seller" , params.seller_id);
+  model(params) {
+    return this.store.find("seller", params.seller_id);
   },
-  actions:{
-    saveProduct(params){
+  actions: {
+    saveProduct(params) {
       var newProduct = this.store.createRecord('product', params);
       params.seller.get('products').addObject(newProduct);
-      newProduct.save().then(function () {
+      newProduct.save().then(function() {
         return params.seller.save();
       });
       swal('Congrats your product has been saved');
       this.transitionTo('portfolio', params.seller);
+    },
+    update(product, params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key] !== undefined) {
+          product.set(key, params[key]);
+        }
+      });
+      product.save();
+      this.transitionTo('portfolio');
     }
   }
   // saveReview(params) {
