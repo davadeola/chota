@@ -29,6 +29,10 @@ export default Ember.Route.extend({
       });
       product.save();
       this.transitionTo('portfolio');
+    },
+    destroyProduct(product) {
+      product.destroyRecord();
+      this.transitionTo('portfolio');
     }
   }
   // saveReview(params) {

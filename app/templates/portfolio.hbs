@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="panel panel-default">
+      <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">{{model.firstname}} {{model.lastname}}</h3>
         </div>
@@ -23,8 +23,8 @@
       </div>
     </div>
   </div>
-{{new-product saveProduct='saveProduct'  seller=model}}
+{{new-product saveProduct='saveProduct' seller=model}}
 {{#each model.products as |product|}}
-    {{product-tile update="update" product=product}}
+    {{product-tile update="update" destroyProduct="destroyProduct" product=product}}
   {{/each}}
 </div>
