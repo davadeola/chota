@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-{{new-product saveProduct='saveProduct'  seller=model}}
+{{new-product saveProduct='saveProduct' seller=model}}
 {{#each model.products as |product|}}
     {{product-tile update="update" destroyProduct="destroyProduct" product=product}}
   {{/each}}
