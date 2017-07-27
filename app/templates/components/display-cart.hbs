@@ -6,14 +6,16 @@
     {{#each shoppingCart.items as |item|}}
         <div class="row well">
           <div class="col-md-4">
-            
             <img src="{{item.img}}" alt="" class="img-responsive">
           </div>
           <div class="col-md-8">
             Name:{{item.name}} <br>
             Price:{{item.price}} <br>
             Quantity:{{item.quantity}} <br>
-            Description:{{item.description}}
+            Description:{{item.description}} <br>
+            <button type="button" class="btn btn-default" {{action "removeProduct" item}}>
+              remove product
+            </button>
           </div>
         </div>
     {{/each}}
