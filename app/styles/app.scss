@@ -10,6 +10,36 @@
 ul{
   list-style: none;
 }
+.wellcome{
+  background-color: #fff;
+  border-radius: 2%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #3CA103;
+  opacity: .7;
+  height: 560px;
+}
+.word{
+  text-align: center;
+}
+.hov{
+  color: #3CA103;
+  transition: 1000ms;
+}
+.hov:hover{
+  text-decoration: none;
+  transition: 1000ms;
+  color: #000;
+}
+.contents{
+  margin-top: 12%;
+}
+.img{
+  margin-left: 42%;
+}
+.center{
+  text-align: center;
+}
 .logo{
   width: 20%;
 }
@@ -37,8 +67,12 @@ ul li{
   text-align: center;
 
 }
-.center{
+.butt{
+margin-left: 40%;
+}
+.centerr{
   text-align: center;
+  font-size: 1.1em;
 }
 .center1{
 
@@ -116,7 +150,62 @@ h1{
 ul button{
   margin-top: 10%;
 }
-
+.ll{
+  color:red;
+}
 .panel-default{
   height: 370px;
+}
+/*Now create a video css*/
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
 }

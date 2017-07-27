@@ -15,6 +15,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
+        {{#if session.isAuthenticated}} {{log session.currentUser}}
+      <li class="link"><a href="#" class="btn btn-xs btn-danger ll" name="button" {{action 'logout'}}>LOG OUT</a></li>
+    {{else}}
+      <li class="link"><a href="#" class="btn btn-xs btn-info"type="button" name="button">{{#link-to 'login'}}LOG IN{{/link-to}}  </a></li>
+      {{/if}}
+
 
         <li class="link"><a href="#">{{#link-to 'goods'}}Goods{{/link-to}}</a></li>
         <li><a href="#">{{fa-icon "shopping-cart"}}</a></li>
@@ -39,10 +45,6 @@
    <button {{action "login"}}> Login </button>
  {{/if}} -->
  <div class="container">
-   {{#if session.isAuthenticated}} {{log session.currentUser}}
-   <button class="btn btn-xs btn-danger"type="button" name="button" {{action 'logout'}}>LOG OUT</button>
-
- {{/if}}
 
 {{outlet}}
 <footer id="footer">
