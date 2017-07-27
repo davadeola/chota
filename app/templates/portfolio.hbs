@@ -25,6 +25,6 @@
   </div>
 {{new-product saveProduct='saveProduct'  seller=model}}
 {{#each model.products as |product|}}
-    {{product-tile update="update" product=product}}
+    {{product-tile update="update" destroyProduct="destroyProduct" product=product}}
   {{/each}}
 </div>
