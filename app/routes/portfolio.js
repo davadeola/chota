@@ -2,7 +2,7 @@ import Ember from 'ember';
 import swal from 'sweetalert';
 export default Ember.Route.extend({
   beforeModel: function(){
-    console.log(this.get('session'));
+    // console.log(this.get('session'));
     if(!this.get('session.isAuthenticated')){
       this.transitionTo('login');
     }

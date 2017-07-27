@@ -7,5 +7,7 @@ export default DS.Model.extend({
   phone: DS.attr(),
   image:DS.attr(),
   description: DS.attr(),
+
   products: DS.hasMany('product', {async:true}),
+
 });

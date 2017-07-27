@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import formValidation from 'ember-form-validation/mixins/form-validation';
 import swal from 'sweetalert';
-import Firebase from 'firebase';
+// import Firebase from 'firebase';
 
 export default Ember.Route.extend(formValidation,{
   firebaseApp: Ember.inject.service(),
@@ -19,7 +19,7 @@ export default Ember.Route.extend(formValidation,{
       var description =controller.get('description');
       var phone = controller.get('phone');
       var ref = this.get('firebaseApp').auth();
-      var _this = this;
+      // var _this = this;
 
       ref.createUserWithEmailAndPassword(email, password).then((userData) => {
         var user = this.get('store').createRecord('seller', {
@@ -37,7 +37,7 @@ export default Ember.Route.extend(formValidation,{
         .then(() =>{
           swal('Congrats! You have just signed up.');
           this.transitionTo('welcome' );
-        }, function (reason) {
+        }, function () {
           swal("Kindly check your internet connection and try again");
         });
       });

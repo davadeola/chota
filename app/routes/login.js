@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import Ember from 'ember';
-
+import swal from 'sweetalert';
 export default Ember.Route.extend({
 
   actions:{
@@ -15,7 +15,7 @@ export default Ember.Route.extend({
         }).then(function() {
             swal('Login successful');
             this.transitionTo('welcome');
-        }.bind(this),function(reason){
+        }.bind(this),function(){
           swal('Sorry something went wrong. Please check your credentials or internet connection and try again');
         });
     },

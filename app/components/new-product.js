@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         seller: this.get('seller')
       };
       this.sendAction('saveProduct', params);
-      console.log(params.seller);
+      // console.log(params.seller);
     }
   }
 });

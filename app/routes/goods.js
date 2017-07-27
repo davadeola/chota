@@ -6,12 +6,20 @@ export default Ember.Route.extend({
 
 
 shoppingCart:Ember.inject.service(),
-
+good: true,
   model(){
     return this.store.findAll("product");
   },
+
+
   actions: {
     addToCart(item) {
+      this.set('sold', true);
+      var sold = this.get('sold');
+
+      if(sold!== true){
+        this.set('good', false);
+      }
       this.get('shoppingCart').add(item);
     },
     // update(selection) {
