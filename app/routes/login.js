@@ -13,8 +13,11 @@ export default Ember.Route.extend({
              email: email,
              password: password
         }).then(function() {
+            swal('Login successful');
             this.transitionTo('welcome');
-        }.bind(this));
+        }.bind(this),function(reason){
+          swal('Sorry something went wrong. Please check your credentials or internet connection and try again');
+        });
     },
   }
 });

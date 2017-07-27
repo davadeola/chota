@@ -9,6 +9,7 @@ export default Ember.Route.extend(formValidation,{
 
 
     signUp(){
+
       var controller = this.get('controller');
       var firstName = controller.get('firstName');
       var lastName = controller.get('lastName');
@@ -30,10 +31,14 @@ export default Ember.Route.extend(formValidation,{
           image: image,
           description: description
         });
+
+
         user.save()
         .then(() =>{
           swal('Congrats! You have just signed up.');
           this.transitionTo('welcome' );
+        }, function (reason) {
+          swal("Kindly check your internet connection and try again");
         });
       });
     }
