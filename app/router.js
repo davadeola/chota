@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('signup');
   this.route('login');
   this.route('contact');
-  this.route('look-up');
+  this.route('look-up',  {path: "look-up/:seller_id"});
 });
 
 export default Router;
