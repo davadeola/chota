@@ -1,4 +1,66 @@
 <div class="container">
-<h1>SIGNUP TODAY!</h1>
-  {{signup-form  signUp="signUp"}}
+  <h1>SIGNUP TODAY!</h1>
+  <div class="row">
+
+    <div class="form">
+      <div class="col-md-6">
+        {{#link-to 'login'}}Are you already a user?{{/link-to}}
+
+        <div class="form-group">
+          <label for="">First name</label>
+          {{input value=firstName placeholder="Enter your name" id="fname" class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="">Last name</label>
+          {{input value=lastName placeholder="Enter your name" id="lname" class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="">Email Address</label>
+          {{input value=email placeholder="Enter your email" id="email" type="email" class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="">Password</label>
+          {{input value=password placeholder="Enter your password" id="password" class="form-control"
+          type="password"}}
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="">Portfolio image</label>
+            {{input value=image placeholder="Enter your image link" id="image" class="form-control"}}
+          </div>
+
+          <label for="">Phone Number</label>
+          {{input value=phone placeholder="Enter your phone number" id="phone" class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="">Brief description</label>
+          {{textarea rows="7" value=description placeholder="Enter a brief description about
+          yourself" id="description" class="form-control" }}
+        </div>
+          <button type="button" name="button" class="btn btn-md btn-success" {{action 'signUp'}}>SIGN UP</button>
+      </div>
+
+    </div>
+
+  </div>
 </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/597a3b075dfc8255d623f4d0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->

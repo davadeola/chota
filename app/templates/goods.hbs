@@ -1,61 +1,35 @@
 
-<div class="col-md-12">
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h6>Panel Name</h6>
-      </div>
-      <div class="panel-body">
-        <img src="assets/images/orange.jpeg" class="images">
-        <div class="center">
-          <span class="label label-warning">KES 20</span>
-          <span class="label label-success">2 crates</span>
-          <span class="label label-info">Seller</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6>Panel Name</h6></div>
-      <div class="panel-body">
-        <img src="assets/images/orange.jpeg" class="images">
-        <div class="center">
-          <span class="label label-warning">KES 20</span>
-          <span class="label label-success">2 crates</span>
-          <span class="label label-info">Seller</span>
-        </div>
+
+  <div class="row">
+      <!-- {{searchable-select
+        content=TEDevents
+        sortBy="title"
+        on-change=(action "update")}}
+        <p>Set by Searchable: {{setBySearchable.title}}</p> -->
+    <br/>
+    <hr>
+    <div class="col-md-8">
+      <div class="row">
+        {{display-goods model=model}}
       </div>
     </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h6>Panel Name</h6>
-      </div>
-      <div class="panel-body">
-        <img src="assets/images/orange.jpeg" class="images">
-        <div class="center">
-          <span class="label label-warning">KES 20</span>
-          <span class="label label-success">2 crates</span>
-          <span class="label label-info">Seller</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h6>Panel Name</h6></div>
-      <div class="panel-body">
-        <img src="assets/images/orange.jpeg" class="images">
-        <div class="center">
-          <span class="label label-warning">KES 20</span>
-          <span class="label label-success">2 crates</span>
-          <span class="label label-info">Seller</span>
-        </div>
+    <div class="col-md-4">
+      <div class="row">
+        {{display-cart product=product}}
       </div>
     </div>
   </div>
 
-</div>
-{{outlet}}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/597a3b075dfc8255d623f4d0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse myNav">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,23 +8,58 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">{{#link-to 'index'}}<img src="assets/images/logo.png" class="logo">{{/link-to}}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Goods</a></li>
-        <li><a href="#">{{fa-icon "shopping-cart"}}</a></li>
+        {{#if session.isAuthenticated}} {{log session.currentUser}}
+      <li class="link"><a href="#" class="btn btn-xs btn-danger ll" name="button" {{action 'logout'}}>LOG OUT</a></li>
+    {{else}}
+      <li class="link"><a href="#" class="btn btn-xs btn-info"type="button" name="button">{{#link-to 'login'}}LOG IN{{/link-to}}  </a></li>
+      <li class="link"><a href="#" class="btn btn-xs btn-info"type="button" name="button">{{#link-to 'signup'}}SIGN UP{{/link-to}}  </a></li>
+      {{/if}}
+
+
+        <li class="link"><a href="#">{{#link-to 'goods'}}Goods{{/link-to}}</a></li>
+        <li><a href="#">{{#link-to 'contact'}}Contact Us{{/link-to}}</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+
+
+
+
+
+
+<!-- beginning of login form -->
+<!-- {{#if session.isAuthenticated}}
+   <button {{action 'logout'}}>Logout</button>
+ {{else}}
+   {{input type="text" value=userEmail placeholder="Email"}}<br>
+   {{input type="password" value=userPassword placeholder="Password"}}<br>
+   <button {{action "login"}}> Login </button>
+ {{/if}} -->
+ <div class="container">
+
 {{outlet}}
+<footer id="footer">
+
+    <div class="center">
+      <ul>
+        <li class="center1"><a href="">{{fa-icon "facebook" size=2}}</a></li>
+        <li class="center1"><a href="www.facebook.com">{{fa-icon "twitter" size=2}}</a></li>
+        <li  class="center1"><a href="www.facebook.com">{{fa-icon "instagram" size=2}}</a></li>
+      </ul>
+      &copy; Chota
+    </div>
+</footer>
+
+
+
+
+ </div>

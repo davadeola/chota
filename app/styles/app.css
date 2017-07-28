@@ -1,12 +1,54 @@
+.mail{
+  margin-left: 20%;
+  margin-top: -10%;
+  max-width:100%;
+}
+ul{
+  list-style: none;
+}
 
+ul li{
+  display: inline-block;
+}
 .images{
+  width: 200px;
+  height: 140px;
+}
+
+.images1{
   width: 100%;
+  height: 180px;
+}
+.footer{
+  text-align: center;
+  
 }
 .center{
   text-align: center;
 }
+.center1{
+  text-align: center;
+  padding-left:20px;
+  padding-right:20px;
+  transition: 1000ms;
+  color:green;
+}
+.center1:hover{
+  transition: 1000ms;
+  transform: scale(1.2);
+
+}
 .right{
   float: right;
+}
+.circle{
+  border-radius: 50%;
+    max-width:100%;
+    max-height: 100%;
+}
+.maps{
+  width: 100%;
+  height: 40%;
 }
 /*styling for the image on index*/
 .front{
@@ -39,4 +81,12 @@
 }
 h1{
   text-align: center;
+}
+
+ul button{
+  margin-top: 10%;
+}
+
+.panel-default{
+  height: 370px;
 }

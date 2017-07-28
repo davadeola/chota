@@ -1,16 +1,31 @@
 <div class="container">
   <h1>LOGIN</h1>
-  <form class="form signupform" action="index.html" method="post">
+  <form class="form signupform"  method="post">
     <div class="form-group">
       <label for="">Email Address</label>
-      {{input class="form-control" placeholder="Enter your email" value=email}}
+      {{input class="form-control" placeholder="Enter your email" value=userEmail}}
     </div>
 
     <div class="form-group">
       <label for="">Password</label>
-      {{input class="form-control" placeholder="Enter your password" value=passwords}}
+      {{input class="form-control" placeholder="Enter your password" type="password" value=userPassword}}
     </div>
+    <button type="button" name="button" class="btn btn-sm btn-success centerrr" {{action 'login'}}>LOGIN</button>
 
-    <button type="button" name="button" class="btn btn-sm btn-success">LOGIN</button>
+    {{#link-to 'signup'}}Are you a new user?{{/link-to}}
   </form>
+
 </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/597a3b075dfc8255d623f4d0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
