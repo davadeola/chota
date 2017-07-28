@@ -13,18 +13,19 @@
             <label>Email:</label><p>{{model.email}}</p><br>
             <label>Phone Number:</label><p>{{model.phone}}</p> <br>
             <label>Seller Description:</label><p>{{model.description}}</p> <br>
-
             <!-- <p>{{model.email}}</p> -->
           </div>
         </div>
         <div class="panel-footer">
             Farmer and Business man
+
         </div>
+        {{update-portfolio  updatePortfolio='updatePortfolio' seller=model}}
       </div>
     </div>
   </div>
 {{new-product saveProduct='saveProduct' seller=model}}
 {{#each model.products as |product|}}
-    {{product-tile update="update" destroyProduct="destroyProduct" product=product}}
+    {{product-tile update="update" product=product}}
   {{/each}}
 </div>
