@@ -1,7 +1,19 @@
 # chota
 
-## The future of E-Commerce in Kenya. Unlike the normal E-Commerce sites this site is tailor made for farmers and farm produce. it gives a platform to all kinds of farmers to easily access their customers and widen their market.
+* *chota* -[chota](link to deploy)
 
+## Problem Statement
+This is the future of E-Commerce in Kenya. Unlike the normal E-Commerce sites this site is tailor made for farmers and their farm produce. It gives a platform to all kinds of farmers to easily access their customers and widen their market. The farmers need to create log-in credentials, once that is done an online portfolio is made. In the portfolio, they can add more products/goods and edit what they already posted.
+Customers can view all the goods posted on the site without having to log-in.
+
+* Visit the website here [link to deploy](link to deploy).
+
+## Collaborators
+The project idea was by [David Adeola](https://github.com/davadeola)
+The project was brought to life with help from:
+* [Dennis Muturia](https://github.com/dennismuturia)
+* [Grace Njoroge](https://github.com/NjeriNjoroge)
+* [Charles Kakai](https://github.com/charliekaks)
 
 ## Prerequisites
 
@@ -10,7 +22,6 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Ember CLI](https://ember-cli.com/)
-
 
 ## Installation
 
@@ -27,24 +38,5 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## Copyright & License Information
+Everything here is protected under [MIT license](license).

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import swal from 'sweetalert';
 export default Ember.Route.extend({
-
+updatePortfolioForm:false,
   beforeModel: function() {
     console.log(this.get('session'));
     if (!this.get('session.isAuthenticated')) {
@@ -11,6 +11,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.find("seller", params.seller_id);
   },
+
   actions: {
     saveProduct(params) {
       var newProduct = this.store.createRecord('product', params);
@@ -21,6 +22,10 @@ export default Ember.Route.extend({
       swal('Congrats your product has been saved');
       this.transitionTo('portfolio', params.seller);
     },
+    destroyProduct(product) {
+      product.destroyRecord();
+      this.transitionTo('portfolio');
+    },
     update(product, params) {
       Object.keys(params).forEach(function(key) {
         if (params[key] !== undefined) {
@@ -30,17 +35,29 @@ export default Ember.Route.extend({
       product.save();
       this.transitionTo('portfolio');
     },
+
     delete(product) {
     var seller = product.get('seller.products');
     seller.forEach(function(item){
       if (item===product) {
         item.destroyRecord();
-        
+
       }
     });
 
 
     },
+
+    updatePortfolio(seller, params){
+      Object.keys(params).forEach(function(key){
+        if(params[key]!==undefined){
+          seller.set(key, params[key]);
+        }
+      });
+      seller.save();
+      this.transitionTo('portfolio');
+    }
+
   }
 
   // console.log('entered end');

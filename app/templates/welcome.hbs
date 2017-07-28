@@ -1,5 +1,4 @@
-<h1>Welcome</h1>
-{{#link-to 'portfolio' session.uid}}Go to your private page.{{/link-to}}
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -13,3 +12,19 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+<div class="fullscreen-bg">
+  <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+    <source src="assets/images/video.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="wellcome">
+  <div class="contents">
+    <img src="assets/images/logo1.png" class="img">
+    <div class="word">
+    <h1>Welcome</h1>
+    <h2>Sell your products at your own convenience</h2>
+    {{#link-to 'portfolio' session.uid class="hov"}}{{fa-icon "sign-in" size=4}} <h3>View Your portfolio</h3>{{/link-to}}
+  </div>
+  </div>
+</div>

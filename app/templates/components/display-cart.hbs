@@ -13,8 +13,8 @@
             Price:{{item.price}} <br>
             Quantity:{{item.quantity}} <br>
             Description:{{item.description}} <br>
-            <button type="button" class="btn btn-default" {{action "removeProduct" item}}>
-              remove product
+            <button type="button" class="btn btn-danger" style="float:right" {{action "removeProduct" item}}>
+              {{fa-icon "fa-trash-o" size="20px"}}
             </button>
           </div>
         </div>

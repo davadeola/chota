@@ -12,9 +12,14 @@
       </div>
     </div>
 
+
     <div class="panel-footer">
-      <!-- {{update-product product=product update="update"}} -->
+      
       <button type="button" name="button" class="btn btn-danger fg" {{action 'delete' product}}> Delete {{fa-icon "fa-trash-o" size="20px"}}</button>
+
+
+      {{update-product product=product update="update"}}
+
     </div>
   </div>
 </div>
