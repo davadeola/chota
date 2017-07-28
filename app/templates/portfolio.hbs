@@ -13,7 +13,6 @@
             <label>Email:</label><p>{{model.email}}</p><br>
             <label>Phone Number:</label><p>{{model.phone}}</p> <br>
             <label>Seller Description:</label><p>{{model.description}}</p> <br>
-
             <!-- <p>{{model.email}}</p> -->
           </div>
         </div>
@@ -27,6 +26,6 @@
   </div>
 {{new-product saveProduct='saveProduct' seller=model}}
 {{#each model.products as |product|}}
-    {{product-tile   product=product}}
+    {{product-tile update="update" product=product}}
   {{/each}}
 </div>

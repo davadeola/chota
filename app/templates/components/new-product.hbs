@@ -1,3 +1,4 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
   Add Product
 </button>
 
@@ -26,10 +27,10 @@
           <div class="form-group">
             {{input type="text" class="form-control"  placeholder="image URL" value=img id="imgProduct" class="form-control"}}
           </div>
-          <button type="button" class="btn btn-primary" data-dismiss="modal" {{action "saveProduct"}}>Save changes</button>
         </form>
       </div>
       <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" {{action "saveProduct"}}>Save changes</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
