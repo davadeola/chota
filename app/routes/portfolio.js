@@ -22,15 +22,6 @@ updatePortfolioForm:false,
       swal('Congrats your product has been saved');
       this.transitionTo('portfolio', params.seller);
     },
-    update(product, params) {
-      Object.keys(params).forEach(function(key) {
-        if (params[key] !== undefined) {
-          product.set(key, params[key]);
-        }
-      });
-      product.save();
-      this.transitionTo('portfolio');
-    },
     destroyProduct(product) {
       product.destroyRecord();
       this.transitionTo('portfolio');

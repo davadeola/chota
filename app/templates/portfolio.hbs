@@ -17,6 +17,7 @@
         </div>
         <div class="panel-footer">
             Farmer and Business man
+
         </div>
         {{update-portfolio  updatePortfolio='updatePortfolio' seller=model}}
       </div>
@@ -24,6 +25,6 @@
   </div>
 {{new-product saveProduct='saveProduct' seller=model}}
 {{#each model.products as |product|}}
-    {{product-tile update="update" destroyProduct="destroyProduct" product=product}}
+    {{product-tile   product=product}}
   {{/each}}
 </div>
