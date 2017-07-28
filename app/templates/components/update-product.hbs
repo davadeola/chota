@@ -29,3 +29,6 @@
       <button {{action 'update' product}} class="btn btn-warning">Save Changes</button>
     </form>
   </div>
+{{else}}
+  <button {{action 'updateProductForm'}} class="btn btn-success butt">Update</button>
+{{/if}}

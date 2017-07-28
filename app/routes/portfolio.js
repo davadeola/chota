@@ -26,6 +26,15 @@ updatePortfolioForm:false,
       product.destroyRecord();
       this.transitionTo('portfolio');
     },
+    update(product, params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key] !== undefined) {
+          product.set(key, params[key]);
+        }
+      });
+      product.save();
+      this.transitionTo('portfolio');
+    },
     updatePortfolio(seller, params){
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
